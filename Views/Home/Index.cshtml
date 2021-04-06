@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model IndexViewModel
+
+<h2>@Model.TeamCategory</h2>
+<br />
+
+@foreach (var x in Model.Bowlers)
+{
+    <h6>@x.BowlerFirstName @x.BowlerMiddleInit  @x.BowlerLastName</h6>
+    <p>@x.BowlerAddress @x.BowlerCity, @x.BowlerState, @x.BowlerZip</p>
+    <p>@x.BowlerPhoneNumber</p>
+}
+
+<div page-info="@Model.PageNumberingInfo" page-url-teamname="@Model.TeamCategory">
+
+</div>
